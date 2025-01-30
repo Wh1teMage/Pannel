@@ -727,6 +727,11 @@ function CommandFabric.UseCommand(self: IPannel, name: string, ...)
 	self.CommandList[name].Function(...)
 end
 
+function CommandFabric.UpdateCommand(self: IPannel, name: string, arguments: {string})
+	if (not self.CommandList[name]) then return end
+	self.CommandList[name].Arguments = arguments
+end
+
 
 --** Pannel
 
