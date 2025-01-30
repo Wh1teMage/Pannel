@@ -359,8 +359,8 @@ local function BindPannelInput(self: IPannel)
 
 		Input:ReleaseFocus()
 
-		CommandHelperFabric:ClearCommandHelpers()
-		CommandHelperFabric:ChangeCommandHelperSize()
+		CommandHelperFabric.ClearCommandHelpers(self)
+		CommandHelperFabric.ChangeCommandHelperSize(self)
 	end)
 end
 
